@@ -1,0 +1,147 @@
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* CONTAINER GLOBAL */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* HEADER FIXE ET MODERNE */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #b61717;
+    color: white;
+    padding: 20px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.profile-info-left {
+    flex: 1;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.profile-info-left a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.profile-info-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.header-text h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.header-text p {
+    font-size: 1em;
+    color: #eee;
+}
+
+/* SECTIONS */
+.section {
+    margin: 40px 0;
+}
+
+.section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #b61717;
+}
+
+/* CARTES COMPÉTENCES ET AUTRES */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 250px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #b61717;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95em;
+    color: #444;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        text-align: left;
+    }
+
+    .profile-info-right {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+}
