@@ -50,6 +50,8 @@ header:hover {
     flex: 1;
     font-size: 0.95em;
     line-height: 1.5;
+
+    transition : opacity 1s;
 }
 
 .profile-info-left a {
@@ -201,7 +203,7 @@ header:hover {
 
 /* Masquage d'éléments */
 .hide {
-    display: none;
+    opacity : 0;
 }
 
 @media (max-width: 768px) {

@@ -12,7 +12,7 @@ function stickHeader() {
     }
 }
 
-// Toggle function for hiding and showing contact information
+// Information pour ombrage le header
 function toggleContactInfo() {
     var contactInfo = document.getElementById("contact-info");
     // Toggle the 'hide' class on the contact info
