@@ -64,6 +64,13 @@ header {
     border: 2px solid #fff;
 }
 
+.linkedin-icon,
+.github-icon,
+.instagram-icon {
+    width: 24px;
+    height: 24px;
+}
+
 .header-text h1 {
     font-size: 1.8em;
     margin-bottom: 5px;
@@ -83,7 +90,31 @@ header {
 .section h2 {
     font-size: 1.8em;
     margin-bottom: 20px;
-    color: #b61717;
+    color: #e3d7e6;
+    background-color: #df2929;
+}
+
+/* le block conteneur */
+.marquee-rtl {
+    max-width: 30em;
+    /* largeur de la fenêtre */
+    margin: 1em auto 2em;
+    border: 10px solid #F0F0FF;
+    overflow: hidden;
+    /* masque tout ce qui dépasse */
+    box-shadow: 0 .25em .5em #CCC, inset 0 0 1em .25em #CCC;
+}
+
+* le bloc défilant */ .marquee-rtl> :first-child {
+    display: inline-block;
+    /* modèle de boîte en ligne */
+    padding-right: 2em;
+    /* un peu d'espace pour la transition */
+    padding-left: 100%;
+    /* placement à droite du conteneur */
+    white-space: nowrap;
+    /* pas de passage à la ligne */
+    animation: defilement-rtl 15s infinite linear;
 }
 
 /* CARTES COMPÉTENCES ET AUTRES */
@@ -117,12 +148,26 @@ header {
     color: #444;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* Style du bouton de réduction */
+.toggle-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Masquage d'éléments */
+.hide {
+    display: none;
+}
+
+@media (max-width: 10%) {
     .header-container {
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
+        gap: 30px;
         text-align: left;
     }
 

@@ -1,5 +1,5 @@
 // Sticky header effect when scrolling
-window.onscroll = function() {stickHeader()};
+window.onscroll = function () { stickHeader() };
 
 var header = document.getElementById("sticky-header");
 var sticky = header.offsetTop;
@@ -9,5 +9,4 @@ function stickHeader() {
     header.classList.add("sticky-header");
   } else {
     header.classList.remove("sticky-header");
-  }
-}
+  }}
